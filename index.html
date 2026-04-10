@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew & Banter RoboCafe</title>
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --card: #ffffff;
+      --text: #3a2419;
+      --accent: #c9a04c;
+      --border: #e7ddd0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .hero-image {
+      width: 100%;
+      display: block;
+      background: #eee;
+    }
+
+    .content {
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0 0 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--accent);
+      color: white;
+    }
+
+    .note {
+      margin-top: 14px;
+      font-size: 0.9rem;
+      color: #6b5a4f;
+    }
+
+    @media (max-width: 640px) {
+      .content {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- Replace this filename with your uploaded image file -->
+    <img src="brew-banter-poster.png" alt="Brew and Banter RoboCafe poster" class="hero-image" />
+
+    <section class="content">
+      <h1>Get updates</h1>
+      <p>Sign up to hear about Brew &amp; Banter RoboCafe updates.</p>
+
+      <!-- Replace YOUR_FORM_ID with your real Formspree form ID -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="you@example.com"
+          required
+        />
+        <button type="submit">Sign up</button>
+      </form>
+
+      <div class="note">
+        This page is designed for GitHub Pages. Just upload this file as <strong>index.html</strong>,
+        add your image file, and replace the form endpoint.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
